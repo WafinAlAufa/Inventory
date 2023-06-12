@@ -128,6 +128,13 @@ header {
   align-items: center;
   justify-content: center;
 }
+.user-dropdown li a{
+  text-decoration: none;
+  color: black;
+}
+.user-dropdown li a:visited{
+  color: black;
+}
 .arrow-down-profile {
   width: 10px;
   height: 10px;
@@ -167,10 +174,10 @@ header {
   color: white;
   text-decoration: none;
 }
-.logo-side-bar-1:hover .img-s-1 .fa-book,.logo-side-bar-2:hover .img-s-2 .fa-box,.logo-side-bar-3:hover .img-s-3 .fa-folder,.logo-side-bar-4:hover .img-s-4 .fa-gear{
+.logo-side-bar-1:hover .img-s-1 .fa-book,.logo-side-bar-2:hover .img-s-2 .fa-box,.logo-side-bar-3:hover .img-s-3 .fa-folder,.logo-side-bar-4:hover .img-s-4 .fa-gear,.child:hover .img-s-3 .fa-building-columns,.child_2:hover .img-s-3 .fa-person-running,.hakAccess:hover .img-s-4 .fa-universal-access ,.addUsers:hover .img-s-4 .fa-user-plus{
   color: #ededed;
 }
-.fa-book,.fa-box,.fa-folder,.fa-gear{
+.fa-book,.fa-box,.fa-folder,.fa-gear,.fa-building-columns,.fa-person-running,.fa-universal-access,.fa-user-plus{
   color: grey;
 }
 .admin-or-user-inside {
@@ -183,6 +190,13 @@ header {
  width: 100%;
   gap: 40px;
   padding-right: 10%;
+}
+.child:hover .text-s-3 .s_3_t,.child_2:hover .text-s-3 .s_3_t,.hakAccess:hover .text-s-4 .s_4_t ,.addUsers:hover .text-s-4 .s_4_t{
+  color: white;
+  text-decoration: none;
+}
+.child .text-s-3 .s_3_t,.child_2 .text-s-3 .s_3_t,.hakAccess .text-s-4 .s_4_t,.addUsers .text-s-4 .s_4_t{
+  text-decoration: none;
 }
 .logo-side-bar-1 {
   display: flex;
@@ -204,9 +218,33 @@ header {
   border-radius: 10px;
 
 }
+.dropdown-m-d-b{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .logo-side-bar-1:hover,.logo-side-bar-2:hover,.logo-side-bar-3:hover,.logo-side-bar-4:hover{
   background-color: #0087ff;
- 
+}
+.child.downMaster,.child_2.downMaster,.hakAccess.downMaster,.addUsers.downMaster{
+  padding: 5%;
+  display: flex;
+  max-height: 100px;
+}
+.child,.child_2,.hakAccess,.addUsers{
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 0%;
+    border-radius: 10px;
+    transition: max-height 0.5s ease-in;
+    max-height: 0;
+
+}
+.child:hover,.child_2:hover,.hakAccess:hover,.addUsers:hover{
+  background-color: #4F709C;
 }
 .img-1-side-bar {
   width: 20px;
@@ -655,4 +693,31 @@ header {
     color: #fff;
     background-color: #0052cc;
     font-size: 1.2em;
+}
+
+/* Vendor CSS */
+.button_box_card_box{
+  display: flex;
+}
+.main_content_box.vendorGap{
+  gap: 60px;
+}
+.cardBoxbox{
+  display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.boxImgVendor{
+  height:200px;
+  width:100%;
+}
+.card-img-top{
+  height: 100%;
+}
+.card-body{
+  gap: 10px;
+}
+.d-flex{
+  gap: 10px;
 }

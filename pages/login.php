@@ -16,7 +16,7 @@
     <div class="container">
 
         <div class="box-login">
-            <form action="pages/cek_login.php">
+            <form action="modul/cek_login.php">
                 <div class="login-text-box">
                     <h1 class="login-text">LOGIN</h1>
                 </div>

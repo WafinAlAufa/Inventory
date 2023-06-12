@@ -269,9 +269,9 @@ header {
   }
   
   /* main content */
-  .main_content{
+  .main_content_box{
     display: flex;
-    width: 85%;
+    width: 100%;
     padding: 3%;
     flex-direction: column;
     gap: 20%;
@@ -285,13 +285,13 @@ header {
   .product_header_text{
     display: flex;
     gap: 5px;
-    width: 50%;
+  
   }
   .header_fd{
     display: flex;
     justify-content: center;
     gap: 30px;
-    width:50%;
+ 
   }
   .batch_h_b{
     background-color: white;
@@ -416,4 +416,16 @@ header {
   background: white;
   margin-top: 5%;
   border-radius: 20px;
+}
+/* Modal popup */
+
+.boxAllAdd{
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.boxAdd_all{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

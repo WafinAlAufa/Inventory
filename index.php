@@ -14,5 +14,3 @@ if($cek_login == 0){
 }
 
 //include "pages/main.php";
-
-?>

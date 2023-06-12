@@ -4,7 +4,7 @@
             <div class="product_header_text">
                 <div class="product_text_box">
                     <h1 class="product_header_t">
-                        Vendor List
+                        Clirnt List
                     </h1>
                 </div>
                 <div class="product_text_box-2">
@@ -26,11 +26,11 @@
             <div class="cardBoxbox">
                 <div class="card" style="width: 18rem;">
                     <div class="boxImgVendor">
-                        <img src="assets/img/dump_2.jpg" class="card-img-top" alt="...">
+                        <img src="assets/img/person-1.jpg" class="card-img-top" alt="...">
                     </div>
                     <div class="card-body flex-sm-column d-flex">
                         <div class="d-flex justify-content-center">
-                            <h5 class="card-title">PT.JOJO RAKYAT SEJATI</h5>
+                            <h5 class="card-title">James Cammeron</h5>
                         </div>
                         <div class="d-flex flex-sm-column">
                             <div class="d-flex ">

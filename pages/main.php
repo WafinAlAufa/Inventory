@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootsrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header class="navbar">
         <div class="logo">
@@ -44,40 +45,43 @@
             </div>
         </div>
         <div class="user-dropdown " id="user-dropdown">
-            <li><a href=""></a>Profile</li>
-            <li><a href=""></a>Help & Support</li>
-            <li><a href=""></a>Display & accessibility</li>
-            <li><a href="pages/cek_logout.php">Log Out</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Help & Support</a></li>
+            <li><a href="">Display & accessibility</a></li>
+            <li><a href="modul/cek_logout.php">Log Out</a></li>
         </div>
     </header>
     <div class="container-main">
-        <?php 
-        
-            $nav = !empty($_GET["nav"]) ? $_GET["nav"] : "home";
-            $base_url = "http://[::1]/wafin/Inventory";
+        <?php
 
-            $page = '';
-            if($nav == 'dashboard'){
-                $page = 'dashboard.php';
-            }elseif($nav == 'product'){
-                $page = 'product.php';
-            }elseif($nav == 'master'){
-                $page = 'master.php';
-            }elseif($nav == 'setting'){
-                $page = 'setting.php';
-            }else{
-                header("Location: http://[::1]/wafin/Inventory/index.php?nav=dashboard");
-            }
+        $nav = !empty($_GET["nav"]) ? $_GET["nav"] : "home";
+        $base_url = "http://localhost/inventory/Inventory";
 
-            
-            include "menu.php"; 
+        $page = '';
+        if ($nav == 'dashboard') {
+            $page = 'dashboard.php';
+        } elseif ($nav == 'product') {
+            $page = 'product.php';
+        } elseif ($nav == 'master') {
+            $page = 'master.php';
+        } elseif ($nav == 'client') {
+            $page = 'client.php';
+        } elseif ($nav == 'setting') {
+            $page = 'setting.php';
+        } else {
+            header("Location:http://localhost/inventory/Inventory/ /index.php?nav=dashboard");
+        }
+
+
+        include "menu.php";
         ?>
-        <?php 
+        <?php
 
-            include $page;
+        include $page;
 
         ?>
     </div>
+    <script src="assets/js/js_strap.js"></script>
     <script src="assets/js/chart.umd.min.js"></script>
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script>
@@ -98,6 +102,7 @@
         };
         //semua halaman web jika di klik maka ditambahkan function e atau event 
         window.addEventListener('click', function(e) {
+
             // membuat variabel element yang menangkap id dari user-dropdown
             var element = document.getElementById("user-dropdown");
             // membuat kondisi if else pada user and profile
@@ -111,6 +116,10 @@
             }
         });
 
+        function hapus() {
+            var pertanyaan = confirm("Yakin mau di delete");
+            console.log(pertanyaan);
+        }
         //Catatan Pak Diar dukumen ready Wajib untuk eksekusi 
 
         $(document).ready(function() {
