@@ -69,7 +69,7 @@
                     <i class="fa-solid fa-universal-access"></i>
                 </div>
                 <div class="text-s-4">
-                    <h1 class="text-side-bar-4"><a href="index.php?nav=setting" class="s_4_t"> Access Rights </a></h1>
+                    <h1 class="text-side-bar-4"><a href="index.php?nav=access" class="s_4_t"> Access Rights </a></h1>
                 </div>
             </div>
         </div>

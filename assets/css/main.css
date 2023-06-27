@@ -721,3 +721,14 @@ header {
 .d-flex{
   gap: 10px;
 }
+
+/* Crud */
+ul li{
+ list-style: none;
+}
+.w_100{
+  width: 100% !important;
+}
+.gap-40{
+  gap: 40px;
+}

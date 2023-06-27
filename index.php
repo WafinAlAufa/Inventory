@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 session_start();
@@ -7,9 +7,9 @@ $cek_login = !empty($_SESSION["sess_login"]) ? 1 : 0;
 
 // echo $_SESSION["sess_login"];
 
-if($cek_login == 0){
+if ($cek_login == 0) {
     include "pages/login.php";
-}else{
+} else {
     include "pages/main.php";
 }
 

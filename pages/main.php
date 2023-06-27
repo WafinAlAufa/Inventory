@@ -1,3 +1,7 @@
+<?php
+require 'config/conn.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/product.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,10 +58,8 @@
     </header>
     <div class="container-main">
         <?php
-
+        // $base_url = "http://localhost/inventory/Inventory";
         $nav = !empty($_GET["nav"]) ? $_GET["nav"] : "home";
-        $base_url = "http://localhost/inventory/Inventory";
-
         $page = '';
         if ($nav == 'dashboard') {
             $page = 'dashboard.php';
@@ -66,21 +69,21 @@
             $page = 'master.php';
         } elseif ($nav == 'client') {
             $page = 'client.php';
+        } elseif ($nav == 'access') {
+            $page = 'access.php';
         } elseif ($nav == 'setting') {
             $page = 'setting.php';
         } else {
-            header("Location:http://localhost/inventory/Inventory/ /index.php?nav=dashboard");
+            header("Location:http://localhost/inventory/Inventory/index.php?nav=dashboard");
         }
-
-
         include "menu.php";
+
         ?>
         <?php
-
         include $page;
-
         ?>
     </div>
+    <script src="assets/js/sweetalert2.js"></script>
     <script src="assets/js/js_strap.js"></script>
     <script src="assets/js/chart.umd.min.js"></script>
     <script src="assets/js/jquery-3.7.0.min.js"></script>
@@ -115,11 +118,6 @@
                 toggleBtnIcon.classList = "fa-solid fa-chevron-down";
             }
         });
-
-        function hapus() {
-            var pertanyaan = confirm("Yakin mau di delete");
-            console.log(pertanyaan);
-        }
         //Catatan Pak Diar dukumen ready Wajib untuk eksekusi 
 
         $(document).ready(function() {
@@ -322,6 +320,27 @@
                     },
                 },
             });
+        }
+
+        function showEdit() {
+            alert('tess');
+            // $.ajax({
+            //     type: "GET", //we are using GET method to get data from server side
+            //     url: 'conn.php', // get the route value
+            //     data: {employee_id:employeeId}, //set data
+            //     beforeSend: function () {//We add this before send to disable the button once we submit it so that we prevent the multiple click
+
+            //     },
+            //     success: function (response) {//once the request successfully process to the server side it will return result here
+            //         response = JSON.parse(response);
+            // $('#nameAdd').val(response.name)
+            //         $("#edit-form [name=\"id\"]").val(response.id);
+            //         $("#edit-form [name=\"email\"]").val(response.email);
+            //         $("#edit-form [name=\"first_name\"]").val(response.first_name);
+            //         $("#edit-form [name=\"last_name\"]").val(response.last_name);
+            //         $("#edit-form [name=\"address\"]").val(response.address);
+            //     }
+            // });
         }
     </script>
 </body>
