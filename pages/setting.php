@@ -13,6 +13,7 @@ if ($setSub == 'index') {
 } elseif ($setSub == 'update') {
     $ps = 'setting/edit.php';
 } else {
+
     // // Jika tidak ada opsi yang dipilih, misalnya "setting" sebagai default, maka masukkan halaman "setting.php"
     echo "<script>
     window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=setting&setSub=index';

@@ -6,9 +6,20 @@ function tambah($data)
     $username = htmlspecialchars($data["username"]);
     $password = htmlspecialchars($data["password"]);
     $role = htmlspecialchars($data["role"]);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    // verify username has taken or not
+    $stmt = $conn->prepare("SELECT 1 FROM users where username=?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_row();
+    if ($user) {
+        $error[] = "This username is already taken!";
+    }
+    print_r($stmt);
     $query = "INSERT INTO users 
     VALUES
-    ('','$nama','$username','$password','$role')";
+    ('','$nama','$username','$hashed_password','$role')";
     mysqli_query($conn, $query);
     // mysqli affect berfungsi untuk cek apakah data berhasil di input atau tidak
     return mysqli_affected_rows($conn);

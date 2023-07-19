@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
                 <li>
                     <div class="input-group mb-3 d-flex flex-column mb-3 gap-2">
                         <label for="kontak">Contact:</label>
-                        <input type="text" pattern="[+0-9]+" name='kontak' id="kontak" value="<?php echo $ed['kontak']; ?>" required class="form-control w_100" placeholder="Example +62999999999" aria-label="Input Contact" aria-describedby="basic-addon1" maxlength="12">
+                        <input type="text" pattern="[+0-9]+" name='kontak' id="kontak" value="<?php echo $ed['kontak']; ?>" class="form-control w_100" placeholder="Example +62999999999" aria-label="Input Contact" aria-describedby="basic-addon1" maxlength="12">
                     </div>
                 </li>
                 <li>

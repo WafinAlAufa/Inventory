@@ -174,10 +174,10 @@ header {
   color: white;
   text-decoration: none;
 }
-.logo-side-bar-1:hover .img-s-1 .fa-book,.logo-side-bar-2:hover .img-s-2 .fa-box,.logo-side-bar-3:hover .img-s-3 .fa-folder,.logo-side-bar-4:hover .img-s-4 .fa-gear,.child:hover .img-s-3 .fa-building-columns,.child_2:hover .img-s-3 .fa-person-running,.hakAccess:hover .img-s-4 .fa-universal-access ,.addUsers:hover .img-s-4 .fa-user-plus{
+.logo-side-bar-1:hover .img-s-1 .fa-book,.logo-side-bar-2:hover .img-s-2 .fa-box,.logo-side-bar-3:hover .img-s-3 .fa-folder,.logo-side-bar-4:hover .img-s-4 .fa-gear,.child:hover .img-s-3 .fa-building-columns,.child_2:hover .img-s-3 .fa-person-running,.hakAccess:hover .img-s-4 .fa-universal-access ,.addUsers:hover .img-s-4 .fa-user-plus,.money:hover .img-s-3 .fa-building-columns,.money_2:hover .img-s-3 .fa-person-running,.logo-side-bar-3:hover .img-s-3 .fa-money-bill{
   color: #ededed;
 }
-.fa-book,.fa-box,.fa-folder,.fa-gear,.fa-building-columns,.fa-person-running,.fa-universal-access,.fa-user-plus{
+.fa-book,.fa-box,.fa-folder,.fa-gear,.fa-building-columns,.fa-person-running,.fa-universal-access,.fa-user-plus,.fa-money-bill{
   color: grey;
 }
 .admin-or-user-inside {
@@ -191,11 +191,11 @@ header {
   gap: 40px;
   padding-right: 10%;
 }
-.child:hover .text-s-3 .s_3_t,.child_2:hover .text-s-3 .s_3_t,.hakAccess:hover .text-s-4 .s_4_t ,.addUsers:hover .text-s-4 .s_4_t{
+.child:hover .text-s-3 .s_3_t,.child_2:hover .text-s-3 .s_3_t,.hakAccess:hover .text-s-4 .s_4_t ,.addUsers:hover .text-s-4 .s_4_t,.money:hover .text-s-3 .s_3_t,.money_2:hover .text-s-3 .s_3_t{
   color: white;
   text-decoration: none;
 }
-.child .text-s-3 .s_3_t,.child_2 .text-s-3 .s_3_t,.hakAccess .text-s-4 .s_4_t,.addUsers .text-s-4 .s_4_t{
+.child .text-s-3 .s_3_t,.child_2 .text-s-3 .s_3_t,.hakAccess .text-s-4 .s_4_t,.addUsers .text-s-4 .s_4_t,.money .text-s-3 .s_3_t,.money_2 .text-s-3 .s_3_t{
   text-decoration: none;
 }
 .logo-side-bar-1 {
@@ -226,12 +226,12 @@ header {
 .logo-side-bar-1:hover,.logo-side-bar-2:hover,.logo-side-bar-3:hover,.logo-side-bar-4:hover{
   background-color: #0087ff;
 }
-.child.downMaster,.child_2.downMaster,.hakAccess.downMaster,.addUsers.downMaster{
+.child.downMaster,.child_2.downMaster,.hakAccess.downMaster,.addUsers.downMaster,.money.downMaster,.money_2.downMaster{
   padding: 5%;
   display: flex;
   max-height: 100px;
 }
-.child,.child_2,.hakAccess,.addUsers{
+.child,.child_2,.hakAccess,.addUsers,.money,.money_2{
     display: none;
     justify-content: center;
     gap: 10px;
@@ -243,7 +243,7 @@ header {
     max-height: 0;
 
 }
-.child:hover,.child_2:hover,.hakAccess:hover,.addUsers:hover{
+.child:hover,.child_2:hover,.hakAccess:hover,.addUsers:hover,.money:hover,.money_2:hover{
   background-color: #4F709C;
 }
 .img-1-side-bar {

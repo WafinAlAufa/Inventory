@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
     if (hapus($id) > 0) {

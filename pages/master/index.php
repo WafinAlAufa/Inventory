@@ -20,7 +20,7 @@
                     </a>
                 </div>
                 <div class="export_menu">
-                    <a href="index.php?nav=master&venSub=export">
+                    <a href="pages/master/export.php" target="_blank">
                         <button type="button" class="btn btn-warning"><i class="fa-solid fa-file-export"></i> Export</button>
                     </a>
                 </div>

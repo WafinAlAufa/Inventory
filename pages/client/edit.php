@@ -1,20 +1,20 @@
 <?php
 $id = $_GET["id"];
-$ed = query("SELECT * FROM vendor WHERE id='$id'")[0];
+$ed = query("SELECT * FROM client WHERE id='$id'")[0];
 if (isset($_POST["submit"])) {
     // cek data
     if (ubah($_POST) > 0) {
         echo "
         <script>
         alert('data berhasil diubah!');
-        document.location.href='index.php?nav=master';
+        document.location.href='index.php?nav=client';
         </script>
         ";
     } else {
         echo "
         <script>
         alert('data gagal diubah!');
-        document.location.href='index.php?nav=master';
+        document.location.href='index.php?nav=client';
         </script>";
     }
 }
@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
 
 <body>
     <div class="container d-flex flex-column gap-40 pt-3">
-        <h1>Edit data master</h1>
+        <h1>Edit data client</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <ul class="d-flex flex-column gap-3">
                 <input type="text" value="<?php echo $ed["id"]; ?>" name="id" style="display: none;">

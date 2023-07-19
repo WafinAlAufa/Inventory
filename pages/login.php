@@ -14,15 +14,24 @@
 
 <body>
     <div class="container">
-
+        <?php
+        // Menampilkan pesan error jika login gagal
+        if (isset($_GET['pesan']) && $_GET['pesan'] == 'gagal') {
+            echo "<script>
+            alert('Username or Password is Inccorect');
+            document.location.href='http://localhost/inventory/Inventory/';
+            </script>";
+        }
+        ?>
         <div class="box-login">
-            <form action="modul/cek_login.php">
+            <form action="modul/cek_login.php" method="POST">
+
                 <div class="login-text-box">
                     <h1 class="login-text">LOGIN</h1>
                 </div>
                 <div class="user-name">
                     <label for="name">Username</label>
-                    <input type="text" class='name' id='name' name='name' require>
+                    <input type="text" class='name' id='name' name='username' require>
                 </div>
                 <div class="user-password">
                     <label for="password">Password</label>
@@ -38,6 +47,7 @@
                 </div>
         </div>
         </form>
+
     </div>
 </body>
 

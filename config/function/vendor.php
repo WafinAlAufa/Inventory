@@ -69,15 +69,26 @@ function ubah($data)
     global $conn;
     $id = $data["id"];
     $nama = htmlspecialchars($data["nama"]);
-    $username = htmlspecialchars($data["username"]);
-    $password = htmlspecialchars($data["password"]);
-    $role = htmlspecialchars($data["role"]);
+    $alamat = htmlspecialchars($data["alamat"]);
+    $kontak = htmlspecialchars($data["kontak"]);
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+    // Menghapus semua karakter non-angka
+    $numbersOnly = preg_replace('/[^0-9]/', '', $kontak);
+    // Memisahkan nomor menjadi setiap 3 digit dengan spasi
+    $formattedContact = implode(' ', str_split($numbersOnly, 3));
+    // Menambahkan kembali simbol '+'
+    $formattedContact = '+' . $formattedContact;
+    // fungsi preg_replace untuk menghapus semua karakter non-angka dari variabel $kontact. Kemudian, kita menggunakan fungsi implode dan str_split untuk memisahkan nomor menjadi setiap 3 digit dengan spasi. Terakhir, kita menambahkan kembali simbol + ke hasil yang telah diformat. Dengan menggunakan pendekatan ini, Anda dapat menjaga simbol + tetap ada dan memiliki spasi setiap 3 digit pada nomor telepon yang ditampilkan.
+
     // query insert data
     $query = "UPDATE vendor SET
             nama='$nama',
-            username='$username',
-            password='$password',
-            role='$role'
+            alamat='$alamat',
+            kontak='$formattedContact',
+            gambar='$gambar'
             WHERE id ='$id'";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);

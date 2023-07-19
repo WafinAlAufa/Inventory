@@ -1,18 +1,17 @@
 <?php
 if (isset($_POST["submit"])) {
     if (tambah($_POST) > 0) {
-
         echo "
     <script>
     alert('Successfuly add new user');
-    document.location.href='index.php?nav=master';
+    document.location.href='index.php?nav=client';
     </script>
     ";
     } else {
         echo "
     <script>
    alert('Failed add new user');
-   document.location.href='index.php?nav=master';
+   document.location.href='index.php?nav=client';
     </script> 
     ";
     }
@@ -30,7 +29,7 @@ if (isset($_POST["submit"])) {
 
 <body>
     <div class="container d-flex flex-column gap-40 pt-3">
-        <h1>Add data vendor</h1>
+        <h1>Add data client</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <ul class="d-flex flex-column gap-3 ">
                 <li>

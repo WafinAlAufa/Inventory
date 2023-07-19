@@ -67,6 +67,8 @@ require 'config/conn.php';
             $page = 'product.php';
         } elseif ($nav == 'master') {
             $page = 'master.php';
+        } elseif ($nav == 'transaction') {
+            $page = 'transaction.php';
         } elseif ($nav == 'client') {
             $page = 'client.php';
         } elseif ($nav == 'access') {
@@ -74,7 +76,10 @@ require 'config/conn.php';
         } elseif ($nav == 'setting') {
             $page = 'setting.php';
         } else {
-            header("Location:http://localhost/inventory/Inventory/index.php?nav=dashboard");
+            // header("Location:http://localhost/inventory/Inventory/index.php?nav=dashboard");
+            echo "<script>
+            window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=dashboard';
+            </script>";
         }
         include "menu.php";
 
@@ -87,6 +92,22 @@ require 'config/conn.php';
     <script src="assets/js/js_strap.js"></script>
     <script src="assets/js/chart.umd.min.js"></script>
     <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <script>
+        var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
+
+        function checkAll(myCheckbox) {
+            if (myCheckbox.checked == true) {
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = true;
+                });
+            } else {
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = false;
+                });
+            }
+        }
+        // input number 
+    </script>
     <script>
         // membuat variabel toggleBtnIcon untuk menangkap tag i yang berada pada user-name > toggle-btn 
         const toggleBtnIcon = document.querySelector(".name-username .toggle-btn i");

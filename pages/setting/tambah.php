@@ -1,6 +1,8 @@
 <?php
 if (isset($_POST["submit"])) {
     if (tambah($_POST) > 0) {
+        print_r($_POST);
+        die;
         echo "
     <script>
     alert('Successfuly add new user');
