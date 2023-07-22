@@ -27,7 +27,7 @@ if ($setSub == 'index') {
 } else {
     // // Jika tidak ada opsi yang dipilih, misalnya "transaction" sebagai default, maka masukkan halaman "transaction.php"
     echo "<script>
-    window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=transaction&transactionSub=index';
+    window.location.href = 'http://localhost/inventory/index.php?nav=transaction&transactionSub=index';
     </script>";
 }
 include $tran;

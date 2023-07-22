@@ -15,7 +15,7 @@ if ($setSub == 'index') {
 } else {
     // // Jika tidak ada opsi yang dipilih, misalnya "access" sebagai default, maka masukkan halaman "access.php"
     echo "<script>
-    window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=access&accSub=index';
+    window.location.href = 'http://localhost/inventory/index.php?nav=access&accSub=index';
     </script>";
 }
 include $acc;

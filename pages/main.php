@@ -78,7 +78,7 @@ require 'config/conn.php';
         } else {
             // header("Location:http://localhost/inventory/Inventory/index.php?nav=dashboard");
             echo "<script>
-            window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=dashboard';
+            window.location.href = 'http://localhost/inventory/index.php?nav=dashboard';
             </script>";
         }
         include "menu.php";

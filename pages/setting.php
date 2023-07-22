@@ -16,7 +16,7 @@ if ($setSub == 'index') {
 
     // // Jika tidak ada opsi yang dipilih, misalnya "setting" sebagai default, maka masukkan halaman "setting.php"
     echo "<script>
-    window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=setting&setSub=index';
+    window.location.href = 'http://localhost/inventory/index.php?nav=setting&setSub=index';
     </script>";
 }
 include $ps;

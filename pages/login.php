@@ -19,7 +19,7 @@
         if (isset($_GET['pesan']) && $_GET['pesan'] == 'gagal') {
             echo "<script>
             alert('Username or Password is Inccorect');
-            document.location.href='http://localhost/inventory/Inventory/';
+            document.location.href='http://localhost/inventory/';
             </script>";
         }
         ?>

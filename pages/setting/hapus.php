@@ -6,14 +6,14 @@ if (isset($_GET["id"])) {
         echo "
         <script>
         alert('data berhasil dihapus!');
-        document.location.href='../Inventory/index.php?nav=setting';
+        document.location.href='index.php?nav=setting';
         </script>
         ";
     } else {
         echo "
         <script>
         alert('data gagal dihapus!');
-        document.location.href='../Inventory/index.php?nav=setting';
+        document.location.href='index.php?nav=setting';
         </script>
         ";
     }

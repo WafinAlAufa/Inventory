@@ -16,7 +16,7 @@ if ($setSub == 'index') {
 } else {
     // // Jika tidak ada opsi yang dipilih, misalnya "master" sebagai default, maka masukkan halaman "master.php"
     echo "<script>
-    window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=master&venSub=index';
+    window.location.href = 'http://localhost/inventory/index.php?nav=master&venSub=index';
     </script>";
 }
 include $ven;

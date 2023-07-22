@@ -16,7 +16,7 @@ if ($setSub == 'index') {
 } else {
     // // Jika tidak ada opsi yang dipilih, misalnya "client" sebagai default, maka masukkan halaman "client.php"
     echo "<script>
-    window.location.href = 'http://localhost/inventory/Inventory/index.php?nav=client&clientSub=index';
+    window.location.href = 'http://localhost/inventory/index.php?nav=client&clientSub=index';
     </script>";
 }
 include $clie;

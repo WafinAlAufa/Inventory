@@ -1,24 +1,44 @@
 <?php
 if (isset($_POST["submit"])) {
-    if (tambah($_POST) > 0) {
-        print_r($_POST);
-        die;
+    $result = tambah($_POST);
+    if ($result === true) {
         echo "
     <script>
-    alert('Successfuly add new user');
+    alert('Successfully add new user');
     document.location.href='index.php?nav=setting';
     </script>
     ";
     } else {
         echo "
     <script>
-   alert('Failed add new user');
-   document.location.href='index.php?nav=setting';
+    alert('$result');
     </script> 
     ";
     }
 }
+
 ?>
+
+<!-- 
+// if (isset($_POST["submit"])) {
+//     $result = tambah($_POST);
+//     if ($result === true) {
+//         echo "
+//     <script>
+//     alert('Successfuly add new user');
+//     document.location.href='index.php?nav=setting';
+//     </script>
+//     ";
+//     } else {
+//         echo "
+//     <script>
+//    alert('$result');
+//    document.location.href='index.php?nav=setting';
+//     </script> 
+//     ";
+//     }
+// } -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,6 +93,33 @@ if (isset($_POST["submit"])) {
             </ul>
         </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#username').on('input', function() {
+                const username = $(this).val().trim();
+                if (username !== '') {
+                    $.ajax({
+                        url: 'cek_tambah.php',
+                        type: 'post',
+                        data: { username: username },
+                        success: function(response) {
+                            if (response === 'taken') {
+                                $('#username-status').text('Username already taken. Please choose another one.');
+                                $('#submit').attr('disabled', true);
+                            } else {
+                                $('#username-status').text('');
+                                $('#submit').attr('disabled', false);
+                            }
+                        }
+                    });
+                } else {
+                    $('#username-status').text('');
+                    $('#submit').attr('disabled', false);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

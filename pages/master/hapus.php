@@ -5,14 +5,14 @@ if (isset($_GET["id"])) {
         echo "
         <script>
         alert('data berhasil dihapus!');
-        document.location.href='../Inventory/index.php?nav=master';
+        document.location.href='index.php?nav=master';
         </script>
         ";
     } else {
         echo "
         <script>
         alert('data gagal dihapus!');
-        document.location.href='../Inventory/index.php?nav=master';
+        document.location.href='index.php?nav=master';
         </script>
         ";
     }
